@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 248, 250, 252;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+@layer base {
+  html {
+    @apply text-base;
+  }
+  
+  h1 {
+    @apply text-4xl font-bold leading-tight;
+  }
+  
+  h2 {
+    @apply text-3xl font-bold leading-tight;
+  }
+  
+  h3 {
+    @apply text-2xl font-bold leading-tight;
+  }
+  
+  h4 {
+    @apply text-xl font-semibold leading-tight;
+  }
+  
+  h5 {
+    @apply text-lg font-semibold leading-tight;
+  }
+  
+  h6 {
+    @apply text-base font-semibold leading-tight;
+  }
+  
+  p {
+    @apply text-base leading-relaxed;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-600 text-white hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary-600 text-white hover:bg-secondary-700 focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:ring-offset-2;
+  }
+  
+  .btn-accent {
+    @apply bg-accent-600 text-white hover:bg-accent-700 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden;
+  }
+  
+  .container-custom {
+    @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+  }
+  
+  .input {
+    @apply block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Chat bubble styles */
+.chat-bubble {
+  @apply max-w-[80%] p-3 rounded-lg;
+}
+
+.chat-bubble-user {
+  @apply bg-primary-100 text-gray-800 rounded-tr-none ml-auto;
+}
+
+.chat-bubble-bot {
+  @apply bg-gray-100 text-gray-800 rounded-tl-none;
+}
+
+/* Image upload area */
+.upload-area {
+  @apply border-2 border-dashed border-gray-300 rounded-lg p-6 text-center transition-all duration-200;
+}
+
+.upload-area-active {
+  @apply border-primary-500 bg-primary-50;
+}
+
+/* Disease confidence indicator */
+.confidence-indicator {
+  @apply h-2 rounded-full bg-gray-200 overflow-hidden;
+}
+
+.confidence-bar {
+  @apply h-full transition-all duration-500 ease-out;
+}
+
+/* Language toggle switch */
+.lang-switch {
+  @apply relative inline-flex h-8 w-16 items-center rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+}
+
+.lang-switch-slider {
+  @apply pointer-events-none inline-block h-6 w-6 transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out;
+}
