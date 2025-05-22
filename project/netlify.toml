@@ -1,10 +1,11 @@
 [build]
   base = "project"
   command = "npm run build"
-  publish = ".next"  # <== relative to `project/`, not `project/.next`
+  publish = ".next"
 
 [build.environment]
   NODE_VERSION = "20"
+  MISE_CONFIG = '{ "idiomatic_version_file_enable_tools": ["node"] }'
   NEXT_PUBLIC_API_URL = "https://krishimitra-api.onrender.com"
 
 [[plugins]]
