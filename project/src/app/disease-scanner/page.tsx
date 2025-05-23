@@ -150,7 +150,7 @@ export default function DiseaseScanner() {
                   className="mt-4 btn btn-primary flex items-center justify-center"
                   onClick={(e) => {
                     e.stopPropagation()
-                    document.querySelector('input[type="file"]')?.click()
+                    (document.querySelector('input[type="file"]') as HTMLInputElement)?.click()
                   }}
                 >
                   <FiCamera className="w-4 h-4 mr-2" />
