@@ -149,8 +149,11 @@ export default function DiseaseScanner() {
                   type="button"
                   className="mt-4 btn btn-primary flex items-center justify-center"
                   onClick={(e) => {
-                    e.stopPropagation()
-                    (document.querySelector('input[type="file"]') as HTMLInputElement)?.click()
+                   onClick={(e) => {
+                          e.stopPropagation();
+                          (document.querySelector('input[type="file"]') as HTMLInputElement)?.click();
+                  }}
+
 
                   }}
                 >
