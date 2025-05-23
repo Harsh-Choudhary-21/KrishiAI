@@ -3,7 +3,7 @@
   command = "npm run build"
 
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "18"
   MISE_CONFIG = '{ "idiomatic_version_file_enable_tools": ["node"] }'
   NEXT_PUBLIC_API_URL = "https://krishimitra-api.onrender.com"
 
