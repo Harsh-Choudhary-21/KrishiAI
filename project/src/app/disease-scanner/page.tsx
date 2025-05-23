@@ -151,6 +151,7 @@ export default function DiseaseScanner() {
                   onClick={(e) => {
                     e.stopPropagation()
                     (document.querySelector('input[type="file"]') as HTMLInputElement)?.click()
+
                   }}
                 >
                   <FiCamera className="w-4 h-4 mr-2" />
